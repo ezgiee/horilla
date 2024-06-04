@@ -11,7 +11,7 @@ from django.utils.translation import gettext_lazy as _
 from attendance.methods.group_by import group_by_queryset as group_by
 from base.context_processors import intial_notice_period
 from base.methods import closest_numbers, sortby
-from base.views import paginator_qry
+from base.views_v1 import paginator_qry
 from employee.models import Employee
 from horilla.decorators import (
     hx_request_required,

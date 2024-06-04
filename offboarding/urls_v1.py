@@ -6,7 +6,7 @@ This module is used to register url mappings to functions
 
 from django.urls import path
 
-from offboarding import views
+from offboarding import views_v1 as views
 
 urlpatterns = [
     path("offboarding-pipeline", views.pipeline, name="offboarding-pipeline"),

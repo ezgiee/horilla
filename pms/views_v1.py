@@ -22,7 +22,7 @@ from django.utils.translation import gettext_lazy as _
 
 from attendance.methods.group_by import group_by_queryset
 from base.methods import closest_numbers, get_key_instances, get_pagination, sortby
-from base.views import paginator_qry
+from base.views_v1 import paginator_qry
 from employee.models import Employee, EmployeeWorkInformation
 from horilla.decorators import (
     hx_request_required,

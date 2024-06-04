@@ -7,7 +7,7 @@ from distutils.version import (  # pylint: disable=no-name-in-module,import-erro
 
 from django import get_version
 
-from . import views
+from . import views_v1 as views
 
 if StrictVersion(get_version()) >= StrictVersion("2.0"):
     from django.urls import re_path as pattern
