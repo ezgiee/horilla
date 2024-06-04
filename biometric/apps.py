@@ -24,7 +24,7 @@ class BiometricConfig(AppConfig):
         from horilla.urls import urlpatterns
 
         urlpatterns.append(
-            path("biometric/", include("biometric.urls")),
+            path("biometric/", include("biometric.urls_v1")),
         )
 
         from biometric import sidebar

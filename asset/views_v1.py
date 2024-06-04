@@ -56,7 +56,7 @@ from base.methods import (
     sortby,
 )
 from base.models import Company
-from base.views import paginator_qry
+from base.views_v1 import paginator_qry
 from employee.models import EmployeeWorkInformation
 from horilla.decorators import (
     hx_request_required,

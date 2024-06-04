@@ -9,7 +9,7 @@ from django.urls import path
 
 from attendance.models import AttendanceGeneralSetting
 from base.models import Company
-from base.urls import urlpatterns
+from base.urls_v1 import urlpatterns
 from employee.models import EmployeeGeneralSetting
 from horilla import horilla_apps
 from offboarding.models import OffboardingGeneralSetting

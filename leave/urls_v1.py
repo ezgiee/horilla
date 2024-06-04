@@ -1,7 +1,7 @@
-from django import views
 from django.urls import path
 
-from . import models, views
+from . import models
+from . import views_v1 as views
 
 urlpatterns = [
     path("type-creation", views.leave_type_creation, name="type-creation"),

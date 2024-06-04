@@ -10,7 +10,7 @@ import recruitment.views.actions
 import recruitment.views.dashboard
 import recruitment.views.search
 import recruitment.views.surveys
-from base.views import object_duplicate
+from base.views_v1 import object_duplicate
 from recruitment.forms import (
     OfferLetterForm,
     QuestionForm,

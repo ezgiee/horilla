@@ -6,8 +6,8 @@ This module is used to map url path with view methods.
 
 from django.urls import path
 
-from base.views import object_delete
-from helpdesk import views
+from base.views_v1 import object_delete
+from helpdesk import views_v1 as views
 from helpdesk.models import FAQ, FAQCategory, Ticket
 
 urlpatterns = [

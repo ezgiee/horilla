@@ -13,7 +13,7 @@ from django.template.loader import render_to_string
 from base.backends import ConfiguredEmailBackend
 from employee.models import EmployeeWorkInformation
 from payroll.models.models import Payslip
-from payroll.views.views import payslip_pdf
+from payroll.views.views_v1 import payslip_pdf
 
 logger = logging.getLogger(__name__)
 

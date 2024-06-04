@@ -68,7 +68,7 @@ from payroll.models.models import (
     ReimbursementMultipleAttachment,
 )
 from payroll.threadings.mail import MailSendThread
-from payroll.views.views import view_created_payslip
+from payroll.views.views_v1 import view_created_payslip
 
 operator_mapping = {
     "equal": operator.eq,

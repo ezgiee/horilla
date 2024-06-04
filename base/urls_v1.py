@@ -2,7 +2,8 @@ from django.contrib.auth.models import Group
 from django.contrib.auth.views import PasswordResetConfirmView
 from django.urls import path
 
-from base import announcement, request_and_approve, views
+from base import announcement, request_and_approve
+from base import views_v1 as views
 from base.forms import (
     RotatingShiftAssignForm,
     RotatingWorkTypeAssignForm,

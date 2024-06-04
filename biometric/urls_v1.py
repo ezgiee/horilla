@@ -13,7 +13,7 @@ that require device IDs.
 
 from django.urls import path
 
-from . import views
+from . import views_v1 as views
 from .models import BiometricDevices
 
 urlpatterns = [

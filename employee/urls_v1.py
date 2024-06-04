@@ -6,8 +6,9 @@ This module is used to map url path with view methods.
 
 from django.urls import path
 
-from base.views import object_delete, object_duplicate
-from employee import not_in_out_dashboard, policies, views
+from base.views_v1 import object_delete, object_duplicate
+from employee import not_in_out_dashboard, policies
+from employee import views_v1 as views
 from employee.forms import DisciplinaryActionForm
 from employee.models import DisciplinaryAction, Employee
 from horilla_documents.models import DocumentRequest

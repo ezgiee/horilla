@@ -18,29 +18,27 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path, re_path
 
-import notifications.urls
-from base.views import home, login_user, logout_user
+import notifications.urls_v1
 
 from . import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("django.contrib.auth.urls")),
-    path("accounts/", include("django.contrib.auth.urls")),
-    path("", include("base.urls")),
-    path("recruitment/", include("recruitment.urls")),
-    path("employee/", include("employee.urls")),
-    path("leave/", include("leave.urls")),
-    path("onboarding/", include("onboarding.urls")),
-    path("pms/", include("pms.urls")),
-    path("asset/", include("asset.urls")),
-    path("attendance/", include("attendance.urls")),
-    path("payroll/", include("payroll.urls.urls")),
-    path("helpdesk/", include("helpdesk.urls")),
-    path("offboarding/", include("offboarding.urls")),
-    path("horilla-widget/", include("horilla_widgets.urls")),
+    path("v1/", include("base.urls_v1")),
+    path("recruitment/v1/", include("recruitment.urls")),
+    path("employee/v1/", include("employee.urls_v1")),
+    path("leave/v1/", include("leave.urls_v1")),
+    path("onboarding/v1/", include("onboarding.urls_v1")),
+    path("pms/v1/", include("pms.urls_v1")),
+    path("asset/v1/", include("asset.urls_v1")),
+    path("attendance/v1/", include("attendance.urls_v1")),
+    path("payroll/v1/", include("payroll.urls.urls_v1")),
+    path("helpdesk/v1/", include("helpdesk.urls_v1")),
+    path("offboarding/v1/", include("offboarding.urls_v1")),
+    path("horilla-widget/v1/", include("horilla_widgets.urls_v1")),
     re_path(
-        "^inbox/notifications/", include(notifications.urls, namespace="notifications")
+        "^inbox/notifications/v1/", include(notifications.urls_v1, namespace="notifications")
     ),
     path("i18n/", include("django.conf.urls.i18n")),
 ]
