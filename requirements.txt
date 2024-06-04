@@ -64,3 +64,4 @@ whitenoise
 pyzk==0.9
 django-extensions
 ipython
+djangorestframework

@@ -69,6 +69,7 @@ INSTALLED_APPS = [
     "widget_tweaks",
     "django_apscheduler",
     "django_extensions",
+    "rest_framework",
 ]
 APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
 
