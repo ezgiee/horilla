@@ -65,3 +65,4 @@ pyzk==0.9
 django-extensions
 ipython
 djangorestframework
+djangorestframework_simplejwt
