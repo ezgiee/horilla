@@ -20,6 +20,11 @@ from django.urls import include, path, re_path
 
 import notifications.urls_v1
 
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
 from . import settings
 
 urlpatterns = [
@@ -41,6 +46,23 @@ urlpatterns = [
         "^inbox/notifications/v1/", include(notifications.urls_v1, namespace="notifications")
     ),
     path("i18n/", include("django.conf.urls.i18n")),
+
+    path("api/v2/", include([
+        path("", include("base.urls_v2")),
+        path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+        path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+        path("employee/", include("employee.urls_v2")),
+        path("asset/", include("asset.urls_v2")),
+        path("attendance/", include("attendance.urls_v2")),
+        path("helpdesk/", include("helpdesk.urls_v2")),
+        path("leave/", include("leave.urls_v2")),
+        path("notifications/", include("notifications.urls_v2")),
+        path("offboarding/", include("offboarding.urls_v2")),
+        path("onboarding/", include("onboarding.urls_v2")),
+        path("payroll/", include("payroll.urls.urls_v2")),
+        path("pms/", include("pms.urls_v2")),
+        path("recruitment/", include("recruitment.urls_v2")),
+    ])),
 ]
 
 if settings.DEBUG:
